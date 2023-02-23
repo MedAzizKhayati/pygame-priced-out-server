@@ -36,7 +36,7 @@ export class User extends GenericEntity {
   @Column({
     default: '{}',
     nullable: false,
-    type: 'text',
+    type: 'longtext',
     transformer: {
       from: (value: string) => JSON.parse(value),
       to: (value: { [key: string]: number }) => JSON.stringify(value),
