@@ -37,7 +37,7 @@ export class User extends GenericEntity {
     nullable: false,
     type: 'longtext',
     transformer: {
-      from: (value: string) => JSON.parse(value == "NULL" ? "{}" : value),
+      from: (value: string) => JSON.parse(value || '{}'),
       to: (value: { [key: string]: number }) => JSON.stringify(value || {}),
     },
   })
