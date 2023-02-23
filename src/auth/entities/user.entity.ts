@@ -34,7 +34,6 @@ export class User extends GenericEntity {
   storage: number;
 
   @Column({
-    default: '{}',
     nullable: false,
     type: 'longtext',
     transformer: {
